@@ -67,3 +67,14 @@ export default function Home() {
     </div>
   )
 }
+
+export const getStaticProps = async() => {
+  const res = await fetch( "http://localhost:3000/api/users");
+  const users = await res.json()
+  return {
+    props: {users}
+  }
+
+}
+
+

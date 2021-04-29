@@ -1,3 +1,14 @@
 
 # Default ignored files
+/shelf/
 /workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../:\Users\Thoma\Documents\ux\efficoin\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+=======
+
+# Default ignored files
+/workspace.xml
+
