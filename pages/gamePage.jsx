@@ -56,11 +56,29 @@ function valuetext(value) {
     return `${value}°C`;
 }
 
+// const registerUser = async event => {
+//
+//     const res = await fetch('/api/price', {
+//         body: JSON.stringify({
+//             price: 5.3
+//         }),
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         method: 'POST'
+//     })
+//
+//     const result = await res.json()
+//     // result.user => 'Ada Lovelace'
+// }
+
 export default function Home({person}) {
 
+
     useEffect(() => {
+        console.log(person)
         const interval = setInterval(() => {
-            console.log("Making request"+{person});
+            // registerUser()
         }, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -82,7 +100,7 @@ export default function Home({person}) {
 
                 <Grid item xs={4}>
                     <Box m={1}>
-                        <p>Prix: {person.name}</p>
+                        <p>Prix: {person.price[0].value} €</p>
                         <p>Variation: </p>
                     </Box>
 
@@ -118,9 +136,16 @@ export async function getServerSideProps() {
 
 export async function getRandomAPI() {
     const res = await fetch('https://api.publicapis.org/random');
+    const price = await fetch('http://localhost:3000/api/price');
+
+    console.log(price)
+
+
+    let prix = await price.json();
     const json = await res.json();
     return {
         name: json.entries[0].API,
         description: json.entries[0].Description,
+        price: prix.data
     };
 }

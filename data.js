@@ -10,3 +10,18 @@ export const users=[
         mail: 'stefan@stefan.fr'
     }
 ]
+
+export const price=[
+    {
+        id: 1,
+        value: 10.5
+    },
+    {
+        id: 2,
+        value: 10.6
+    },
+    {
+        id: 3,
+        value: 10.0
+    },
+]
