@@ -19,6 +19,12 @@ a {
   box-sizing: border-box;
 }
 
-.BtnSecondary {
-  
+/* Button */
+
+button.MuiButton-containedSecondary:hover {
+  background-color: #FCDF68;
+}
+
+button.MuiButton-containedSecondary:active {
+  background-color: #DFB714;
 }
