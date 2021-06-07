@@ -7,6 +7,7 @@ dbConnect();
 export default async (req,res) => {
     const { method } = req;
 
+
     switch (method) {
         case 'GET':
             try {
@@ -20,10 +21,9 @@ export default async (req,res) => {
         case 'POST':
             try {
                 const price = await Price.create(req.body);
-
                 res.status(201).json({ success: true, data: price })
             } catch (error) {
-                res.status(400).json({ success: false });
+                res.status(400).json({ success: error });
             }
             break;
         default:

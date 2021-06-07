@@ -58,15 +58,7 @@ function valuetext(value) {
 
 // const registerUser = async event => {
 //
-//     const res = await fetch('/api/price', {
-//         body: JSON.stringify({
-//             price: 5.3
-//         }),
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         method: 'POST'
-//     })
+
 //
 //     const result = await res.json()
 //     // result.user => 'Ada Lovelace'
@@ -77,6 +69,12 @@ export default function Home({person}) {
 
     useEffect(() => {
         console.log(person)
+        const res =  fetch('http://localhost:3000/api/price', {
+            method: 'POST',
+            body: JSON.stringify({
+                value: 5
+            }),
+        })
         const interval = setInterval(() => {
             // registerUser()
         }, 1000);

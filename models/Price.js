@@ -4,7 +4,7 @@ const PriceSchema = new mongoose.Schema({
     value: {
         type: Number,
         required: [true, 'Please add a price'],
-        unique: false,
+        unique: true,
         maxlength: [40, 'Title cannot be more than 40 characters']
     },
 
