@@ -3,10 +3,14 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body [class^='mat-'], body [class*=' mat-'] {
+  font-family: 'Poppins', sans-serif;
 }
 
+body .material-icons {
+  font-family: 'Material Icons';
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -14,4 +18,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Button */
+
+button.MuiButton-containedSecondary:hover {
+  background-color: #FCDF68;
+}
+
+button.MuiButton-containedSecondary:active {
+  background-color: #DFB714;
 }
