@@ -1,3 +1,5 @@
+/* Desktop */
+
 .containerHeader {
   background-color: #1b2128;
   height: 100%;
@@ -25,21 +27,56 @@
 }
 
 .titleIntroduction span {
-    color: white;
+  color: white;
 }
 
 .WrapperPlayButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .WrapperPlayButton button {
-    width: 200px;
-    font-size: 20px;
-    font-weight: bold;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .iconButton {
   display: none;
+}
+
+.textLeft {
+  color: white;
+  text-align: left;
+  width: 100%;
+  max-width: 700px;
+  font-size: 20px;
+}
+
+.flexRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.textRight {
+  text-align: right;
+  color: white;
+  width: 100%;
+  max-width: 700px;
+  font-size: 20px;
+}
+
+.textLeft, .textRight {
+  margin-top: 30px;
+}
+
+/* Mobile */
+@media screen and (max-width:500px) {
+  .columnMobile {
+    flex-direction: column;
+  }
+  .titleIntroduction {
+    margin-left: 0px;
+  }
 }

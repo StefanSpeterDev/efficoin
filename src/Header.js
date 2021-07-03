@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    textAlign: "center",
+    marginLeft: "130px",
+    textAlign: "left",
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
@@ -99,18 +100,16 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
+        <IconButton aria-label="Leaderboard" color="inherit">
+          <Image src="/trophy-16.png" height={16} width={16} />
+        </IconButton>
+        <p>Médailles</p>
+      </MenuItem>
+      <MenuItem>
         <IconButton aria-label="Listing leaderboard" color="inherit">
           <ListIcon />
         </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
+        <p>Leaderboard</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
