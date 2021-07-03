@@ -76,6 +76,9 @@
   .columnMobile {
     flex-direction: column;
   }
+  .columnMobileReverse {
+    flex-direction: column-reverse;
+  }
   .titleIntroduction {
     margin-left: 0px;
   }

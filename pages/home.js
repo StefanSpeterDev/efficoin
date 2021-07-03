@@ -99,7 +99,7 @@ export default function PrimarySearchAppBar() {
   const secondContent = (
     <Container maxWidth="xl" className={styles.containerHeader}>
       <Container className={styles.WrapperGrid}>
-        <Grid container spacing={2} className={styles.columnMobile}>
+        <Grid container spacing={2} className={styles.columnMobileReverse}>
           <Grid item xs={12} md={4}>
             <img src="/opti.jpg" />
             <div
